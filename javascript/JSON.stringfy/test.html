@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let st = window.localStorage;
+    let st1 = window.localStorage;
+
+    st.setItem('a', {a:1});
+    st1.setItem('a', JSON.stringify({a:1}));
+
+    st.setItem('b', [1, 2, 3]);
+
+    st.setItem('c', undefined);
+
+    st.setItem('d', null);
+
+    st.setItem('e', true);
+
+    st.setItem('f', 123);
+
+    st.setItem('g', 'abc');
+
+    // ---------------------------------
+
+    st.getItem('a');  // "[object Object]"
+    console.log(st.getItem('a').a)
+    console.log(JSON.parse(st1.getItem('a')).a)
+
+    st.getItem('b');  // "1,2,3"
+
+    st.getItem('c');  // "undefined"
+
+    st.getItem('d');  // "null"
+
+    st.getItem('e');  // "true"
+
+    st.getItem('f');  // "123"
+
+    st.getItem('g');  // "abc"
+  </script>
+</body>
+
+</html>

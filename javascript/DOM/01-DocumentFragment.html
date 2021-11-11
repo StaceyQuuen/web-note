@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <ul id="list"></ul>
+    <ul id="list1"></ul>
+  </body>
+</html>
+<script>
+//使用documentFragment添加节点
+console.time("time")
+let list = document.querySelector("#list"),
+    fragment = document.createDocumentFragment(),
+    n = 50000;
+while(n--){
+  fragment.appendChild(document.createElement("li"));
+};
+list.appendChild(fragment);
+console.timeEnd("time")
+
+//直接操作DOM添加节点
+console.time("time1")
+let list1 = document.querySelector("#list1"),
+    i = 50000;
+while(i--){
+  list1.appendChild(document.createElement("li"))
+};
+console.timeEnd("time1")
+</script>
+
+
+

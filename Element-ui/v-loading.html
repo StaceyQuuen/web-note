@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<survml publishVersion="standard">
+<head>
+<id>1629689521067</id>
+<title>问卷标题</title>
+<description>问卷描述</description>
+<meta type="lang">zh</meta>
+<meta type="theme">orange</meta>
+</head>
+<body>
+<questions>
+<question id="Q1" required="true" needaudio="true">
+<title><![CDATA[表格单选题]]></title>
+<control type="matrix" matrixtype="singledimension" layout="compact-row-title"><rows>
+<row id="1" name="表格行1"></row>
+<row id="2" name="表格行2"></row>
+<row id="3" name="表格行3"></row>
+</rows>
+<cols>
+<col id="c1" needaudio="true">
+<title><![CDATA[单选题]]></title>
+<control type="singleselect">
+<li id="1" group="0">选项1</li>
+<li id="2" group="0">选项2</li>
+<li id="3" group="0">选项3</li>
+</control>
+</col>
+</cols>
+</control>
+</question>
+</questions>
+<sections>
+<section id="P1" begin="Q1" end="Q1">
+<title>第1页</title>
+</section>
+</sections>
+</body>
+</survml>

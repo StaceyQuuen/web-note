@@ -1,0 +1,39 @@
+<html>
+<script type="text/javascript" src="./myaxios.js"></script>
+
+<body>
+  <button class="btn">点我发送请求</button>
+  <button class="btn1">点我发送Node请求</button>
+  <script>
+    console.log(axios)
+    document.querySelector('.btn').onclick = function () {
+      // 分别使用以下方法调用，查看myaxios的效果
+      // axios.post('http://backend-api-02.newbee.ltd/manage-api/v1/adminUser/login', {
+      //   passwordMd5: "e10adc3949ba59abbe56e057f20f883e",
+      //   userName: "admin"
+      // }).then(res => {
+      //   console.log('postAxios 成功响应', res);
+      // })
+
+      axios({
+        method: 'post',
+        url: 'http://backend-api-02.newbee.ltd/manage-api/v1/adminUser/login'
+      }).then(res => {
+        console.log('getAxios 成功响应', res);
+      })
+    }
+    document.querySelector('.btn1').onclick = function() {
+        // 分别使用以下方法调用，查看myaxios的效果
+        axios({
+          method: 'get',
+          url: 'http://localhost:6000/getTest'
+        }).then(res => {
+          console.log('getAxios 成功响应');
+        })
+    }
+  </script>
+</body>
+
+</html>
+
+</html>
