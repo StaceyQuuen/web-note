@@ -402,3 +402,4 @@ trim_trailing_whitespace = false
 
 ```
 
+# 3、vue2脚手架参考文档 https://juejin.cn/post/6990929456382607374
