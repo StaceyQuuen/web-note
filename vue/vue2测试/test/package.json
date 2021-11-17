@@ -11,6 +11,10 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.4.1",
+    "prettier-eslint-cli": "^5.0.1",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
     "vuex": "^3.4.0"
@@ -35,14 +39,13 @@
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
-    "parser": "babel-eslint",
     "root": true,
     "env": {
       "node": true
     },
     "extends": [
       "plugin:vue/essential",
-      "@vue/standard"
+      "@vue/recommended"
     ],
     "parserOptions": {
       "parser": "babel-eslint"
@@ -67,7 +70,9 @@
   ],
   "jest": {
     "collectCoverage": true,
-    "collectCoverageFrom": ["src/**/*.{js,vue}"],
+    "collectCoverageFrom": [
+      "src/**/*.{js,vue}"
+    ],
     "moduleFileExtensions": [
       "js",
       "json",

@@ -402,4 +402,12 @@ trim_trailing_whitespace = false
 
 ```
 
-# 3、vue2脚手架参考文档 https://juejin.cn/post/6990929456382607374
+# 3、vue2脚手架配置eslint和prettier参考文档
+
+eslint+prettier原理与认识： https://juejin.cn/post/6990929456382607374
+
+脚手架配置参考文档：https://blog.csdn.net/u013361179/article/details/108885859
+
+# 4、 解决 eslint 的 Parsing error: Unexpected token 错误
+
+项目文件夹下的.eslint.js文件的配置与package.json文件中有关eslintConfig的配置冲突，删除.eslint.js文件即可
